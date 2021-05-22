@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+		function matriz1(){
+			do{
+				var n=prompt("Ingrese la dimension de la matriz");
+			}while(n%2==0);
+
+			var arreglo=new Array(n);
+
+			for(var i=0;i<n;i++){
+				arreglo[i]=new Array(n);
+			}
+
+			var aux=0;
+
+			for(var i=0;i<n;i++){
+				for(var j=0;j<n;j++){
+					arreglo[i][j]=aux+1;
+				}
+			}
+			var aux2=aux+1;
+			while(aux2<=n-1){
+				for(var i=aux2;i<(n-aux2);i++){
+					for(var j=aux2;j<(n-aux2);j++){
+						arreglo[i][j]=aux2+1;
+					}
+				}
+				aux2++;
+			}
+
+
+
+			for(var i=0;i<n;i++){
+				for(var j=0;j<n;j++){
+					document.write(arreglo[i][j]+"&nbsp&nbsp &nbsp&nbsp");
+				}
+				document.write("<br>");
+			}
+
+			document.write("<br>");
+			document.write("MATRIZ 2"+"<br>");
+
+			var aux3=Math.round(n/2)+1;
+
+			for(var i=0;i<n;i++){
+				for(var j=0;j<n;j++){
+					arreglo[i][j]=aux3-1;
+				}
+			}
+			var aux2=aux+1;
+			var aux4=aux+2;
+
+			while(aux2<=n-1){
+				for(var i=aux2;i<(n-aux2);i++){
+					for(var j=aux2;j<(n-aux2);j++){
+						arreglo[i][j]=aux3-aux4;
+					}
+				}
+				aux2++;
+				aux4++;
+			}
+
+			for(var i=0;i<n;i++){
+				for(var j=0;j<n;j++){
+					document.write(arreglo[i][j]+"&nbsp&nbsp &nbsp&nbsp");
+				}
+				document.write("<br>");
+			}
+		}
+
+
+	</script>
+</head>
+<body>
+
+	<script type="text/javascript">
+		matriz1();
+	</script>
+
+</body>
+</html>

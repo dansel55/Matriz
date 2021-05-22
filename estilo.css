@@ -1,0 +1,59 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+
+	background: #E9ECF4;
+	color: #000;
+	font-family: sans-serif;
+}
+.contenedor{
+
+	width: 90%;
+	max-width: 1000px;
+	display: grid;
+	grid-gap: 20px;
+	margin: 20px auto;
+	grid-template-columns: repeat(2,1fr);
+	grid-template-rows: repeat(2,auto);
+
+	grid-template-areas: "cabecera  cabecera"
+						 "matriz1  matriz2";
+}
+
+.contenedor .cabecera,
+.contenedor .matriz1,
+.contenedor .matriz2{
+
+	background: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+.contenedor .cabecera{
+
+	background: #12203E;
+	color: #fff;
+	grid-area: cabecera;
+}
+
+.contenedor .matriz1,
+.contenedor .matriz2{
+
+	background: #55a8fd;
+	color: #fff;
+	height: auto;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.contenedor .matriz1{
+
+	grid-area: matriz1;
+}
+.contenedor .matriz2{
+
+	grid-area: matriz2;
+}
